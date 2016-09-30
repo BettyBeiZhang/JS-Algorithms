@@ -1,11 +1,7 @@
-//Have the function BinaryReversal(str)take the str parameter being passed, which will be a 
-//postive integer, take its binary representation, reverse that string of bits,
-//and then finally return the new reversed string in decimal form. For example,
-//:if str is "47" then binary version of this string is 00101111. Your program
-//should reverse this binary string which then becomes:11110100 and then finally 
-//return the decimal version of this string, which is 244.
-
-
+//Have the function BinaryReversal(str)take the str parameter being passed, which will be a postive integer, take its binary 
+//representation, reverse that string of bits,and then finally return the new reversed string in decimal form. For example,
+//if str is "47" then binary version of this string is 00101111. Your program should reverse this binary string which then 
+//becomes:11110100 and then finally return the decimal version of this string, which is 244.
 
 function BinaryReversal(str) { 
     var num = Number(str);
@@ -33,16 +29,13 @@ function BinaryReversal(str) {
 }
 
 
-
-
-//Below is the program of the function BinaryConverter(str) return 
-//the decimal form of the binary value. For example: if 101 is passed
-//return 5, or if 1000 is passed return 8. 
+//Below is the program of the function BinaryConverter(str) return the decimal form of the binary value. 
+//For example: if 101 is passed return 5, or if 1000 is passed return 8. 
 
 function BinaryConverter(str){
   return parseInt(str, 2)
 }
-binaryConverter(100); // binary number to decimal form number 4. 
+BinaryConverter(100); // binary number to decimal form number 4. 
 
 
 
