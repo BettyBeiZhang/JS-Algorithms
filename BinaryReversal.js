@@ -23,7 +23,7 @@ function BinaryReversal(str) {
             rst += Math.pow(2,i); // convert to decimal form.
         }
     }
-   
+    
   return rst; 
          
 }
