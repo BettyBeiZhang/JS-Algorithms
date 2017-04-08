@@ -1,6 +1,6 @@
-//Have the function VowelCount(str) take the str string being passed and return the number of vowels the string contains(ie. "Hello All" would return 3). Do not
-///count y as a vowel for this challenges. Assum str is not empty. 
-// Below are three ways to do this challenges. 
+/* Have the function VowelCount(str) take the str string being passed and return the number of vowels the string contains(ie. "Hello All" would return 3). Do not
+count y as a vowel for this challenges. Assum str is not empty. 
+Below are three ways to do this challenges. */
 
 function vowelCount(str){
 	var arr = str.split("");
@@ -42,8 +42,3 @@ function vowelCount3(str){
 
 	},0);  
 }
-
-
-
-
-	
