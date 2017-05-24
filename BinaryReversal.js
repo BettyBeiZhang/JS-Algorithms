@@ -33,7 +33,7 @@ function BinaryReversal(str) {
 //For example: if 101 is passed return 5, or if 1000 is passed return 8. 
 
 function BinaryConverter(str){
-  return parseInt(str, 2)
+  return parseInt(str, 2);
 }
 BinaryConverter(100); // binary number to decimal form number 4. 
 
