@@ -3,39 +3,67 @@ for (var i = 0; i < 5; i++) {
         console.log(new Date, i);
     }, 1000);
 }
- 
-console.log(new Date, i);
 
+console.log(new Date, i);
 /*************************************
-Below is the output: 
+Below is the output:
 Sun Apr 09 2017 23:30:28 GMT-0700 (PDT) 5
 => undefined
 Sun Apr 09 2017 23:30:29 GMT-0700 (PDT) 5
 Sun Apr 09 2017 23:30:29 GMT-0700 (PDT) 5
 Sun Apr 09 2017 23:30:29 GMT-0700 (PDT) 5
 Sun Apr 09 2017 23:30:29 GMT-0700 (PDT) 5
-Sun Apr 09 2017 23:30:29 GMT-0700 (PDT) 5  
+Sun Apr 09 2017 23:30:29 GMT-0700 (PDT) 5
 **********************************/
 
+// A Solution can print out i from 0 to 4
+for (let i = 0; i < 5; i++) {
+    setTimeout(function() {
+        console.log(i);
+    }, 1000);
+}
 
+/* => 6
+0
+1
+2
+3
+4
+*/
 
+//A Solution can print out i from 0 to 4
+for (let i = 0; i < 5; i++) {
+  (function(j){
+    setTimeout(function() {
+        console.log(j);
+    }, 1000);
+  })(i)
+}
+
+/*
+0
+1
+2
+3
+4
+*/
 
 const sleep = (timeountMS) => new Promise((resolve) => {
     setTimeout(resolve, timeountMS);
 });
- 
-(async () => {  
+
+(async () => {
     for (var i = 0; i < 5; i++) {
         await sleep(1000);
         console.log(new Date, i);
     }
- 
+
     await sleep(1000);
     console.log(new Date, i);
 })();
 
 
-/* Below is the output:  (NoTE THE TIMER FOR THE SIX OUTPUT). 
+/* Below is the output:  (NoTE THE TIMER FOR THE SIX OUTPUT).
 => {}
 Sun Apr 09 2017 23:33:01 GMT-0700 (PDT) 0
 Sun Apr 09 2017 23:33:02 GMT-0700 (PDT) 1
