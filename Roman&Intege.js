@@ -23,8 +23,21 @@ var intToRoman = function(num) {
 
 
 // leetcoode #13
-var RomanToInt = function(str) {
-	var baseTranslator = {
+
+ //helper function for consecutive letters input
+    function letterCount(str) {
+      var s = str.match(/([a-zA-Z])\1*/g) || [];
+      return s.map(function(item) {
+        return {
+          letter: item[0],
+          length: item.length
+        };
+      });
+    }
+    // build the main convert function
+    function romanToInt(romanNumeral) {
+      //debugger;
+      var map = {
         I: 1,
         V: 5,
         X: 10,
@@ -32,26 +45,39 @@ var RomanToInt = function(str) {
         C: 100,
         D: 500,
         M: 1000
+      };
+      if (romanNumeral === '') {
+        return 0;
+      }
+      var consecutiveLengths = letterCount(romanNumeral);
+      for (var i = 0; i < consecutiveLengths.length; i++) {
+        if (consecutiveLengths[i].length > 1 && "VLD".includes(consecutiveLengths[i].letter)) {
+          alert("Not a valid roman numerals");
+          return;
+        }
+        if (consecutiveLengths[i].length > 3 && "IXC".includes(consecutiveLengths[i].letter)) {
+          alert("Not a valid roman numerals");
+          return;
+        }
+        if (consecutiveLengths[i].length > 4 && "M".includes(consecutiveLengths[i].letter)) {
+          alert("Not a valid roman numerals");
+          return;
+        }
+      }
+      var sum = 0;
+      for (var i = 0; i < romanNumeral.length; i++) {
+        var v1 = map[romanNumeral[i]];
+        var v2 = map[romanNumeral[i + 1]];
+        // if next roman numeral value greater than the previous one, then result equal v2 -v1
+        if (v2 > v1) {
+          sum = sum + v2 - v1;
+          i++;
+        } else {
+          // normal case, if v2 <= v1. result equal v2 + v1
+          sum = sum + v1;
+        }
+      }
+      return sum;
     };
-
-
-    var prev =0;
-    var rst = 0; 
-
-    for(var i=str.length -1; i>=0; i--) {
-    	var num = baseTranslator[str[i]];
-
-    	if(num> prev){
-    		rst += num;
-    	}else{
-    		rst -= prev;
-    	}
-    	prev = num;   // NOTE THIS 
-    }
-     return rst; 
-
-};
-
-
 
 
