@@ -1,4 +1,4 @@
-/*Given a roman numeral, convert it to an integer. And Integer to Roman numeral. 
+/*Given a roman numeral, convert it to an integer. And Integer to Roman numeral.
 // Numbers in JavaScript are "double-precision 64-bit format IEEE 754 values", according to the spec.
  This has some interesting consequences. There's no such thing as an integer in JavaScript */
 
@@ -15,11 +15,9 @@ var intToRoman = function(num) {
 
     	num = num % weights[i];
     }
-      return str; 
+      return str;
 
 };
-
-  
 
 
 // leetcoode #13
@@ -79,5 +77,3 @@ var intToRoman = function(num) {
       }
       return sum;
     };
-
-
