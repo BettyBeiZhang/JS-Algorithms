@@ -1,5 +1,4 @@
 // write funtion for compare firstWord & secondWord are Anagram
-
 function isAnagram (first, second) {
    var a = first.toLowerCase();
    var b = second.toLowerCase();
