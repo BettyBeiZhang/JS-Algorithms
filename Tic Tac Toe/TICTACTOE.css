@@ -1,5 +1,10 @@
-h2 {
-	text-align: center; 
+h2{
+	text-align: center;
+}
+
+#message {
+	text-align: center;
+	margin-bottom: 10px;
 }
 
 table {
@@ -15,10 +20,10 @@ td{
 .vertical {
 	/* make vertical lines */
 	border-left: 1px solid black;
-	border-right: 1px solid black; 
+	border-right: 1px solid black;
 }
 
 .horizontal  {
     /* make horizontal lines */
-	border-bottom: 1px solid black; 
+	border-bottom: 1px solid black;
 }

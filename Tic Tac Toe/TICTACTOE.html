@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-	<title>TICTACTOE  Skeleton Create</title>
+	<title>TICTACTOE Skeleton Create</title>
 	<link rel="stylesheet" href="TICTACTOE.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
 </head>
-<body>
-	
+
+<body onload=startGame()>
+
 	<h2>TIC TAC TOE</h2>
-	<table>
+	<div id="message">Message go here</div>
+	<table id="game-table"	border="1px">
 		<tr>
 			<td class="horizontal"></td>
 			<td class="vertical horizontal"></td>
 			<td class="horizontal"></td>
-
 		</tr>
 		<tr>
-			<td  class="horizontal"></td>
+			<td class="horizontal"></td>
 			<td class="vertical horizontal"></td>
-			<td  class="horizontal"></td>
+			<td class="horizontal"></td>
 		</tr>
 		<tr>
 			<td></td>
@@ -26,7 +30,9 @@
 			<td></td>
 
 		</tr>
-
 	</table>
+
 </body>
+
 </html>
+<script type="text/javascript" src="app.js"></script>
