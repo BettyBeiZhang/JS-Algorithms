@@ -7,6 +7,11 @@ h2{
 	margin-bottom: 10px;
 }
 
+#result{
+	text-align: center;
+	font-size: 30px;
+}
+
 table {
 	margin: auto;
 }
