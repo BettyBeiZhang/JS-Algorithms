@@ -41,7 +41,7 @@
   function isGameDone(){
     for(var i = 0; i <= 6; i = i + 3) {
             if(board[i] !== "E" && board[i] === board[i + 1] && board[i + 1] == board[i + 2]) {
-                result = board[i] + " won"; //update the state result
+                result = board[i] + " Won"; //update the state result
                 return true;
             }
         }
@@ -49,7 +49,7 @@
         //check columns
         for(var i = 0; i <= 2 ; i++) {
             if(board[i] !== "E" && board[i] === board[i + 3] && board[i + 3] === board[i + 6]) {
-                result = board[i] + " won"; //update the state result
+                result = board[i] + " Won"; //update the state result
                 return true;
             }
         }
@@ -57,7 +57,7 @@
         //check diagonals
         for(var i = 0, j = 4; i <= 2 ; i = i + 2, j = j - 2) {
             if(board[i] !== "E" && board[i] == board[i + j] && board[i + j] === board[i + 2*j]) {
-                result = board[i] + " won"; //update the state result
+                result = board[i] + " Won"; //update the state result
                 return true;
             }
         }
